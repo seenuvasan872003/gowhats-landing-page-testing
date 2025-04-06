@@ -1,0 +1,119 @@
+{
+    "_comment_header": "This file contains the English translations for the WhatsApp API Header page.",
+
+    "nav": {
+        "resources": "Resources",
+        "integration": "Integration",
+        "documentation": "Documentation",
+        "blog": "Blog",
+        "pricing": "Pricing",
+        "English": "English",
+        "tamil": "Tamil"
+      },
+
+    "_comment_homepage": "This file contains the English translations for the WhatsApp API landing page.",
+
+    "banner": {
+      "liveDemo": "Live Demo of WhatsApp API - ",
+      "bookNow": "Book Now"
+    },
+    "hero": {
+      "title": "One-stop <1>eCommerce solution</1> with our WhatsApp API!",
+      "subtitle": "Enjoy instant responses from our AI chatbot, automate conversations, and effortlessly track your service performance!",
+      "button": "Get Started"
+    },
+    "stats": {
+      "companies": {
+        "title": "Over 1000+ Companies",
+        "subtitle": "Trust SaaSUS For Planning."
+      },
+      "sales": {
+        "title": "$3k+",
+        "subtitle": "Processed Sales"
+      },
+      "products": {
+        "title": "5k+",
+        "subtitle": "Product Sold"
+      },
+      "transactions": {
+        "title": "20+",
+        "subtitle": "Transaction Per Day"
+      }
+    },
+    "features": {
+      "heading": "API Features",
+      "title": "Unlock the Full Potential of the WhatsApp API",
+      "subtitle": "Our WhatsApp API solution empowers businesses to automate customer communication, send notifications, and provide instant support.",
+      "items": {
+        "automation": {
+          "title": "Message Automation",
+          "description": "Automate customer interactions and engage more efficiently with AI-driven workflows."
+        },
+        "language": {
+          "title": "Multi-language Support",
+          "description": "Serve customers in their preferred language with built-in multi-language support."
+        },
+        "ai": {
+          "title": "Quick Responses with AI",
+          "description": "Use AI to instantly respond to customer inquiries, providing a seamless support experience."
+        },
+        "media": {
+          "title": "Media Message Support",
+          "description": "Send rich media like images, videos, and documents to enhance customer engagement."
+        },
+        "webhook": {
+          "title": "Webhook Integration",
+          "description": "Integrate seamlessly with your existing system using customizable webhooks."
+        },
+        "analytics": {
+          "title": "Real-time Analytics",
+          "description": "Monitor message performance and customer interactions with real-time analytics."
+        }
+      }
+    },
+    "pricing": {
+      "heading": "Price Planning",
+      "title": "Flexible Pricing for WhatsApp API Usage",
+      "subtitle": "Choose a plan that fits your needs and scale as your business grows.",
+      "card": {
+        "title": "WhatsApp API Subscription",
+        "subtitle": "For businesses needing API-based communication.",
+        "price": "₹999",
+        "period": "/ month",
+        "features": {
+          "messages": "Unlimited Messages",
+          "chatbot": "AI Chatbot Integration",
+          "workflows": "Customizable Workflows",
+          "support": "24/7 Support"
+        },
+        "button": "Pay Now"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "How do I integrate the WhatsApp API with my platform?",
+          "answer": "Our WhatsApp API comes with comprehensive documentation and SDKs for popular programming languages. You can easily integrate it using RESTful API calls or our client libraries."
+        },
+        {
+          "question": "What are the pricing options for the WhatsApp API?",
+          "answer": "We offer flexible pricing plans based on your usage and needs. Our plans start from ₹999 per month, which includes unlimited messages and AI chatbot integration. For more details, please check our pricing section or contact our sales team."
+        },
+        {
+          "question": "Is there a limit to the number of messages I can send?",
+          "answer": "Our standard plan includes unlimited messages. However, to prevent spam and ensure quality service, we have fair usage policies in place. For high-volume senders, we offer custom enterprise plans."
+        },
+        {
+          "question": "Can I use the WhatsApp API for marketing purposes?",
+          "answer": "Yes, you can use the WhatsApp API for marketing, but you must comply with WhatsApp's business policies and obtain explicit consent from your customers before sending them marketing messages."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to elevate your customer interactions?",
+      "subtitle": "Get started with our WhatsApp API today and automate your business messaging.",
+      "button": "Start Now"
+    },
+    "preview": "Instant Preview"
+}
