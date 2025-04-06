@@ -3,10 +3,21 @@
     "builds": [
       {
         "src": "package.json",
-        "use": "@vercel/node",
+        "use": "@vercel/static-build",
         "config": {
-          "buildCommand": "node ./node_modules/vite/bin/vite.js build"
+          "distDir": "dist",
+          "buildCommand": "npx vite build"
         }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|svg|webp)$)",
+        "dest": "/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
       }
     ]
   }
