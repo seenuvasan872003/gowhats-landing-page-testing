@@ -2,8 +2,11 @@ import { MessageSquare, Facebook, Twitter, Instagram, Linkedin, Mail } from 'luc
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation();
+  
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -41,7 +44,7 @@ export default function Footer() {
               <span className="text-2xl font-bold">GoWhats</span>
             </div>
             <p className="text-gray-400">
-              Transform your business with our powerful WhatsApp API solution.
+              {t('footer.companyDescription')}
             </p>
             <div className="flex space-x-4">
               <motion.a whileHover={{ scale: 1.2 }} href="#" className="text-gray-400 hover:text-[#25D366]">
@@ -61,9 +64,9 @@ export default function Footer() {
 
           {/* Quick Links */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold">Quick Links</h3>
+            <h3 className="text-lg font-semibold">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
-              {['About Us', 'Features', 'Pricing', 'Blog', 'Contact'].map((item) => (
+              {(t('footer.quickLinksItems', { returnObjects: true }) as string[]).map((item) => (
                 <motion.li 
                   key={item}
                   whileHover={{ x: 5 }}
@@ -77,9 +80,9 @@ export default function Footer() {
 
           {/* Resources */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold">Resources</h3>
+            <h3 className="text-lg font-semibold">{t('footer.resources')}</h3>
             <ul className="space-y-2">
-              {['Documentation', 'API Reference', 'Tutorials', 'Case Studies', 'Support'].map((item) => (
+              {(t('footer.resourcesItems', { returnObjects: true }) as string[]).map((item) => (
                 <motion.li 
                   key={item}
                   whileHover={{ x: 5 }}
@@ -93,12 +96,12 @@ export default function Footer() {
 
           {/* Newsletter */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold">Newsletter</h3>
-            <p className="text-gray-400">Subscribe to our newsletter for updates and tips.</p>
+            <h3 className="text-lg font-semibold">{t('footer.newsletter')}</h3>
+            <p className="text-gray-400">{t('footer.newsletterDescription')}</p>
             <div className="flex space-x-2">
               <Input 
                 type="email" 
-                placeholder="Enter your email"
+                placeholder={t('footer.emailPlaceholder')}
                 className="bg-white border-green-400 focus:border-green-500 focus:ring-green-500 text-gray-900"
                 aria-label="Email"
               />
@@ -113,7 +116,7 @@ export default function Footer() {
           variants={itemVariants}
           className="mt-12 pt-8 text-center text-gray-400"
         >
-          <p>&copy; {new Date().getFullYear()} GoWhats. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} GoWhats. {t('footer.copyright')}</p>
         </motion.div>
       </motion.div>
     </footer>
