@@ -11,6 +11,21 @@
         "tamil": "Tamil"
       },
 
+    "_comment_fotter": "This file contains the English translations for the WhatsApp API fotter page.",
+
+
+    "footer": {
+      "companyDescription": "Transform your business with our powerful WhatsApp API solution.",
+      "quickLinks": "Quick Links",
+      "quickLinksItems": ["About Us", "Features", "Pricing", "Blog", "Contact"],
+      "resources": "Resources",
+      "resourcesItems": ["Documentation", "API Reference", "Tutorials", "Case Studies", "Support"],
+      "newsletter": "Newsletter",
+      "newsletterDescription": "Subscribe to our newsletter for updates and tips.",
+      "emailPlaceholder": "Enter your email",
+      "copyright": "All rights reserved."
+    },
+
     "_comment_homepage": "This file contains the English translations for the WhatsApp API landing page.",
 
     "banner": {
