@@ -33,7 +33,15 @@
       "bookNow": "Book Now"
     },
     "hero": {
-      "title": "One-stop <1>eCommerce solution</1> with our WhatsApp API!",
+      "title": {
+        "part1": "One-stop",
+        "part2": "eCommerce solution",
+        "part3": "with our"
+      },
+      "typeAnimation": {
+        "text1": "WhatsApp API!",
+        "text2": "GoWhats!"
+      },
       "subtitle": "Enjoy instant responses from our AI chatbot, automate conversations, and effortlessly track your service performance!",
       "button": "Get Started"
     },

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { MessageSquare, Globe, Zap, Image as ImageIcon, Webhook, BarChart, MessageCircle, ShoppingCart, Bell } from 'lucide-react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { TypeAnimation } from 'react-type-animation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   Accordion,
@@ -100,17 +101,37 @@ export default function GowhatsLandingPage() {
               variants={containerVariants}
               className="max-w-3xl mx-auto text-center"
             >
-              <motion.h1 
+              <motion.div 
                 variants={itemVariants}
                 className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
-                dangerouslySetInnerHTML={{ __html: t('hero.title').replace('<1>', '<span class="text-[#25D366]">').replace('</1>', '</span>') }}
-              />
+              >
+                <div className="block">
+                  <span>{t('hero.title.part1')} </span>
+                  <span className="text-[#25D366]">{t('hero.title.part2')}</span>
+                  <span> {t('hero.title.part3')} </span>
+                </div>
+                <TypeAnimation
+                  sequence={[
+                    t('hero.typeAnimation.text1'),
+                    2000,
+                    t('hero.typeAnimation.text2'),
+                    2000,
+                  ]}
+                  wrapper="span"
+                  speed={2}
+                  deletionSpeed={1}
+                  className="text-[#25D366]"
+                  repeat={Infinity}
+                />
+              </motion.div>
+
               <motion.p 
                 variants={itemVariants}
                 className="text-xl mb-8 text-gray-600 leading-relaxed"
               >
                 {t('hero.subtitle')}
               </motion.p>
+
               <motion.div
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
@@ -128,14 +149,14 @@ export default function GowhatsLandingPage() {
           </div>
         </section>
 
-        <section className="py-24 bg-gray-50">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-10">
+        <section className="pb-24 bg-gray-50">
+          <div className="container w-full mx-auto  lg:px-10">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="relative mx-auto w-full max-w-4xl aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-100 via-white to-gray-50"
+              className="relative mx-auto w-full  aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-100 via-white to-gray-50"
             >
               {/* Floating Lucide Icons */}
               <motion.div
@@ -196,7 +217,7 @@ export default function GowhatsLandingPage() {
           </div>
         </section>
 
-        <section className="bg-[#25D366] py-16 -mt-[100px]">
+        <section className="bg-[#25D366] py-16 mt-[10px]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div 
               initial="hidden"
