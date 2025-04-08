@@ -4,6 +4,7 @@ import { MessageSquare, Globe, Zap, Image as ImageIcon, Webhook, BarChart, Messa
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { TypeAnimation } from 'react-type-animation';
+import Particles from '@/components/Particles';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   Accordion,
@@ -90,18 +91,35 @@ export default function GowhatsLandingPage() {
 
       <main>
         <section className="py-20 bg-white text-black relative overflow-hidden">
-          <motion.div 
+          {/* Background Particles Layer */}
+          <div className="absolute inset-0 z-0">
+            <Particles
+              particleColors={['#25D366']}
+              particleCount={200}
+              particleSpread={20}
+              speed={0.1}
+              particleBaseSize={250}
+              moveParticlesOnHover={true}
+              alphaParticles={true}
+              disableRotation={false}
+            />
+          </div>
+
+          {/* Gradient Overlay */}
+          <motion.div
             style={{ opacity }}
-            className="absolute inset-0 bg-gradient-to-b from-[#25D366]/10 to-transparent"
+            className="absolute inset-0 bg-gradient-to-b from-[#25D366]/10 to-transparent z-10"
           />
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <motion.div 
+
+          {/* Main Content */}
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+            <motion.div
               initial="hidden"
               animate="visible"
               variants={containerVariants}
               className="max-w-3xl mx-auto text-center"
             >
-              <motion.div 
+              <motion.div
                 variants={itemVariants}
                 className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
               >
@@ -125,7 +143,7 @@ export default function GowhatsLandingPage() {
                 />
               </motion.div>
 
-              <motion.p 
+              <motion.p
                 variants={itemVariants}
                 className="text-xl mb-8 text-gray-600 leading-relaxed"
               >
@@ -137,9 +155,9 @@ export default function GowhatsLandingPage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button 
-                  onClick={() => window.location.href = "https://app.gowhats.in/"} 
-                  size="lg" 
+                <Button
+                  onClick={() => window.location.href = "https://app.gowhats.in/"}
+                  size="lg"
                   className="bg-[#25D366] hover:bg-[#000000] text-white transition-all duration-300"
                 >
                   {t('hero.button')}
