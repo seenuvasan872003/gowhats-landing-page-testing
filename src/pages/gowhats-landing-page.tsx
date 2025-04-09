@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { MessageSquare, Globe, Zap, Image as ImageIcon, Webhook, BarChart, MessageCircle, ShoppingCart, Bell } from 'lucide-react';
+import { MessageSquare, Globe, Zap, Image as ImageIcon, Webhook, BarChart,  } from 'lucide-react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { TypeAnimation } from 'react-type-animation';
@@ -177,7 +177,7 @@ export default function GowhatsLandingPage() {
               className="relative mx-auto w-full  aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-100 via-white to-gray-50"
             >
               {/* Floating Lucide Icons */}
-              <motion.div
+              {/* <motion.div
                 className="z-30 absolute top-4 left-8 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center shadow-lg"
                 animate={{ y: [0, -12, 0], opacity: [0.8, 1, 0.8] }}
                 transition={{ repeat: Infinity, duration: 3 }}
@@ -207,7 +207,7 @@ export default function GowhatsLandingPage() {
                 transition={{ repeat: Infinity, duration: 3.5 }}
               >
                 <Bell className="w-6 h-6 text-[#25D366]" />
-              </motion.div>
+              </motion.div> */}
 
               {/* Main Image with Overlay */}
               <motion.div
